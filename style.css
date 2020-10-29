@@ -1,0 +1,156 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(196, 196, 196);
+}
+nav {
+  position: fixed;
+  top:0;left:0;right:0;z-index:10;
+}
+main {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.main {
+  text-align: center;
+  width: 90%;
+  margin: 10px auto;
+  max-width: 500px; 
+}
+footer {
+  position: absolute;
+  bottom: 0; left:0; right:0;
+  text-align: center;
+}
+nav,footer{
+  height: 60px; padding: 15px;
+  background-color: rgb(12,10,104); color: white;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: yellow;
+}
+
+header {
+  background-color:orange;
+  text-align: center;
+  color: black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.landing img {
+  width: 95%;
+  max-width: 280px;
+  height: auto;
+  margin: 20px auto;
+}
+.message {
+  padding: 10px;
+  border-style: solid;
+  background-color: thistle;
+}
+.message h1{
+  color: rgb(121, 104, 7);
+}
+.message p{
+  text-align: left;
+  margin-top: 10px;
+}
+
+.questions-scores{
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin: 10px auto;
+}
+
+.result{
+  padding: 10px;
+  font-weight: bolder;
+  color: black;
+  background-color: rgb(230, 156, 20)
+}
+
+#js-alert {
+  margin-top: 30px;
+}
+.alertMessage {
+  padding: 10px;
+  background-color: black;
+  font-size: 20px;
+  font-weight:bold;
+  text-align: center;
+}
+.green {
+  color: rgb(24, 241, 24);
+}
+.yellow {
+  color: yellow;
+}
+.red {
+  color: red;
+}
+.question-picture{
+  max-width: 400px;
+  height: auto; 
+}
+.currentQuestion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 20px;
+}
+.js-questions {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  color: white;
+  background-color: darkslategray;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 20px auto;
+}
+.js-questions h1 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color:gold;
+}
+.option {
+  font-size: 90%;
+  padding: 5px;
+  text-align: left;
+  border-radius: 5px;
+  border-width: 5px;
+}
+.option:hover {
+  background-color: orangered;
+}
+.button{
+  display: flex;
+  flex-direction: row-reverse;
+}
+button {
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px;
+  color: white;
+  background-color: tomato;
+}
+button:hover {
+  background-color: crimson;
+}
