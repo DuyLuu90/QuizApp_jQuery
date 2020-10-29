@@ -14,6 +14,10 @@ nav {
   position: fixed;
   top:0;left:0;right:0;z-index:10;
 }
+nav h1:hover {
+  color: yellow;
+  cursor: pointer;
+}
 main {
   margin-top: 80px;
   width: 100%;

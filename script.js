@@ -14,7 +14,6 @@ function handleStartClicked() {
 } 
 
 function handlegotItClicked(){
-  //this function display the question 
   $('main').on('click','.message',event =>renderAQuestion());
 };
 
@@ -36,7 +35,6 @@ function generateQuestion(item){
     </form>`;
 }
 
-
 function generateOptions(array,item) {
   let optionHtml='';
   for (let i=0; i<array.length;i++) {
@@ -54,10 +52,9 @@ function renderAQuestion(){
   let question= quizBank[user.currentQuestion];
   let options=question.option; 
   const html= generateQuestion(question);
-  $('.main').html(html);//replace the html of main class
+  $('.main').html(html);
   const optionHtml= generateOptions(options,question);
   $('.options').html(optionHtml);
-  //user.currentQuestion ++;
 };
 
 function createAlertBox (message) {
@@ -76,8 +73,6 @@ function handleAnswerSubmitted(){
     event.preventDefault();
     $('.js-questions').hide();
     let result=quizBank[user.currentQuestion].answer;
-    //this function (1)'receive' the Answer 'submited' by the user, (2)compare it with the 'result', (3) alert the user if his/her ans is correct or not, (4) update the score and the current question.
-    //Q: we can't use let/const to assign the property value to a variable
     user.answer= $("input[name='option']:checked").val();
     if (!user.answer) {
       $('.main').append(`${createAlertBox('Please choose an option!')}`);
@@ -96,19 +91,6 @@ function handleAnswerSubmitted(){
     }
   });
 };
-/*
-function enterKey() {
-  $(document).keypress(event=>{ 
-    let keycode = (event.keyCode ? event.keyCode : event.which); 
-    if(keycode == '13'){ 
-      $('#js-questions').show();
-      $('.alert').empty();
-      user.currentQuestion === quizBank.length?
-      renderFinalScreen():renderAQuestion();
-    } 
-  })
-}
-*/
 
 function handleOKClicked() {
   $('main').on("click",'#OK',event=>{
@@ -138,6 +120,10 @@ function renderFinalScreen() {
   $('.main').html(finalHtml);
 }
 
+function reloadApp(){
+  $('nav').on('click','.app-title', event=>location.reload());
+}
+
 function restartQuiz() {
   $('main').on('click','#startOver', event=> renderAQuestion());
 }
@@ -150,7 +136,9 @@ function runQuizApp() {
   handlegotItClicked();
   handleAnswerSubmitted();
   handleOKClicked();
+  reloadApp();
   restartQuiz();
   exitQuiz();
 } 
+
 $(runQuizApp);
