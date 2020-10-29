@@ -12,7 +12,7 @@ This app was built using jQuery. For more information about jQuery, please visit
 * User has to submit the answer in order to move to the next question.
 * At the end of the round, user will see their final score, and be asked to retake the quiz, or exit (go back to the home page)
 
-If you're ready, let [PLAY]() now!
+If you're ready, let [PLAY](https://duyluu90.github.io/QuizApp_jQuery/) now!
 
 ## Technology:
 
